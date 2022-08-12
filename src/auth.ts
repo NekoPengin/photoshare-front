@@ -16,7 +16,7 @@ const auth = {
     return res;
   },
   login: async () => {
-    console.log("login:", csrf);
+    //console.log("login:", csrf);
     const res = await axios.post(`/login`);
     const resme = await axios.get(`/me`);
 

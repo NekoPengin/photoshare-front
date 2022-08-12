@@ -1,9 +1,27 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue","src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
+    "target": "esnext",
     "composite": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": true,
     "baseUrl": ".",
+    "paths": { 
+      "@/*":["./src/*"] 
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "importsNotUsedAsValues":"remove",
+    "preserveValueImports": false,
   }
 }
+
+
+

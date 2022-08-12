@@ -33,13 +33,13 @@ const getImages = async () => {
   return res.data;
 };
 
-const getImageUrl = async (ids) => {
-  const urls = [];
-  for (const [key, value] of Object.entries(ids)) {
-    const res = await axios.get(`/imageurl/${value}`);
-    urls.push({ datatime: key, url: res });
-  }
-};
+// const getImageUrl = async (ids) => {
+//   const urls = [];
+//   for (const [key, value] of Object.entries(ids)) {
+//     const res = await axios.get(`/imageurl/${value}`);
+//     urls.push({ datatime: key, url: res });
+//   }
+// };
 onMounted(async () => {
   images.value = await getImages();
 });

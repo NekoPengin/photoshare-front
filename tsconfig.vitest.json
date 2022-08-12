@@ -3,8 +3,16 @@
   "exclude": [],
   "compilerOptions": {
     "composite": true,
-    "lib": [],
-    "types": ["node", "jsdom",
-    "liff-type"]
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "types": [
+      "node", 
+      "jsdom",
+      "liff-type"
+    ]
   }
 }

@@ -18,10 +18,11 @@ export const userStore = defineStore({
     async login(accessToken: string) {
       console.log(`accessToken:${accessToken}`)
       const res = await auth.lineLogin(accessToken);
-      if (!res.success) return false;
+      const { status } = res;
+      if (status != 200) return false;
       this.authenticated = true;
-      this.user = await auth.me();
-      this.accessToken = res.token
+      //this.user = await auth.me();
+      //this.accessToken = res.token
     },
     async logout() {
       if (this.authenticated) {
